@@ -116,8 +116,10 @@ class PageController extends Controller {
 	}
 
 	private function getGifFilenameList(): array {
-		$path = dirname(__DIR__, 2);
-		error_log('PATH ' . $path);
-		return [];
+		$path = dirname(__DIR__, 2) . '/img/gifs';
+		$names = array_filter(scandir($path), static function ($name) {
+			return $name !== '.' && $name !== '..';
+		});
+		return array_values($names);
 	}
 }
