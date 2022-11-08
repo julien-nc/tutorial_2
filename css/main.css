@@ -11,7 +11,16 @@
 	align-items: center;
 }
 
+#tutorial_2 > button {
+	margin-bottom: 30px;
+}
+
 .gif-wrapper {
 	display: flex;
 	align-items: center;
+}
+
+#tutorial_2.fixed-size img {
+	width: auto;
+	height: 100px;
 }
